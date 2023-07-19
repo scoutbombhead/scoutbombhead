@@ -1,0 +1,323 @@
+Update started.
+Waiting for device
+
+Device found
+
+001F0027414D500E20363543
+
+UID=001F0027414D500E20363543
+
+Recreate
+
+mkdir -p /home/sa/repo/ubundler/recreated/2.2.11/latest
+
+cp -r /home/sa/repo/ubundler/input/latest/* /home/sa/repo/ubundler/recreated/2.2.11/latest
+
+Processing /home/sa/repo/ubundler/recreated/2.2.11/latest/001F0027414D500E20363543
+
+/home/sa/repo/ubundler/scripts/bdp_composer envelope_fvsk --fvsk /home/sa/repo/ubundler/artifacts/2.2.11/ptool_artifacts_release_prod/fvs.key --dev_pub_key /home/sa/repo/ubundler/recreated/2.2.11/latest/001F0027414D500E20363543/ee_cert.pem --ca_private_key /home/sa/repo/ubundler/artifacts/2.2.11/ptool_artifacts_release_prod/ica_key.pem --output /home/sa/repo/ubundler/recreated/2.2.11/latest/001F0027414D500E20363543/fvs.key.signed
+
+/home/sa/repo/ubundler/scripts/create_head_int_flash.sh /home/sa/repo/ubundler/artifacts/2.2.11/ptool_artifacts_release_prod /home/sa/repo/ubundler/recreated/2.2.11/latest/001F0027414D500E20363543
+
+/home/sa/repo/ubundler/scripts/create_head_ext_flash.sh /home/sa/repo/ubundler/artifacts/2.2.11/ptool_artifacts_release_prod /home/sa/repo/ubundler/recreated/2.2.11/latest/001F0027414D500E20363543
+
+/home/sa/repo/ubundler/scripts/create_head_full_flash.sh /home/sa/repo/ubundler/artifacts/2.2.11/ptool_artifacts_release_prod /home/sa/repo/ubundler/recreated/2.2.11/latest/001F0027414D500E20363543
+
+Preparing the script
+
+Flashing
+
+SEGGER J-Link Commander V6.44i (Compiled May 17 2019 17:37:38)
+
+DLL version V6.44i, compiled May 17 2019 17:37:26
+
+
+
+
+
+J-Link Command File read successfully.
+
+Processing script file...
+
+
+
+J-Link connection not established yet but required for command.
+
+Connecting to J-Link via USB...O.K.
+
+Firmware: J-Link Ultra V4 compiled Oct 22 2019 16:29:03
+
+Hardware version: V4.00
+
+S/N: 504505235
+
+License(s): RDI, FlashBP, FlashDL, JFlash, GDB
+
+VTref=3.305V
+
+Target connection not established yet but required for command.
+
+Device "STM32F429ZI" selected.
+
+
+
+
+
+Connecting to target via SWD
+
+Found SW-DP with ID 0x2BA01477
+
+Found SW-DP with ID 0x2BA01477
+
+Scanning AP map to find all available APs
+
+AP[1]: Stopped AP scan as end of AP map has been reached
+
+AP[0]: AHB-AP (IDR: 0x24770011)
+
+Iterating through AP map to find AHB-AP to use
+
+AP[0]: Core found
+
+AP[0]: AHB-AP ROM base: 0xE00FF000
+
+CPUID register: 0x410FC241. Implementer code: 0x41 (ARM)
+
+Found Cortex-M4 r0p1, Little endian.
+
+FPUnit: 6 code (BP) slots and 2 literal slots
+
+CoreSight components:
+
+ROMTbl[0] @ E00FF000
+
+ROMTbl[0][0]: E000E000, CID: B105E00D, PID: 000BB00C SCS-M7
+
+ROMTbl[0][1]: E0001000, CID: B105E00D, PID: 003BB002 DWT
+
+ROMTbl[0][2]: E0002000, CID: B105E00D, PID: 002BB003 FPB
+
+ROMTbl[0][3]: E0000000, CID: B105E00D, PID: 003BB001 ITM
+
+ROMTbl[0][4]: E0040000, CID: B105900D, PID: 000BB9A1 TPIU
+
+ROMTbl[0][5]: E0041000, CID: B105900D, PID: 000BB925 ETM
+
+------------------------------ execUserPreload ---------------------------------
+
+Reset RCC settings and set up PLL with HSE
+
+Regval=0x33035583
+
+Regval=0x30035583
+
+Regval=0x33035583
+
+Switch system clock source to PLL
+
+Regval=0x0000940A
+
+Cortex-M4 identified.
+
+Erasing device...
+
+Comparing flash   [100%] Done.
+
+Erasing flash     [100%] Done.
+
+Verifying flash   [100%] Done.
+
+J-Link: Flash download: Total time needed: 32.604s (Prepare: 0.015s, Compare: 0.000s, Erase: 32.586s, Program: 0.000s, Verify: 0.000s, Restore: 0.002s)
+
+Erasing flash     [100%] Done.
+
+J-Link: Flash download: Total time needed: 30.686s (Prepare: 0.061s, Compare: 0.000s, Erase: 30.622s, Program: 0.000s, Verify: 0.000s, Restore: 0.002s)
+
+Erasing done.
+
+
+
+Downloading file [/home/sa/repo/ubundler/recreated/2.2.11/latest/001F0027414D500E20363543/head_full_flash.hex]...
+
+Failed to open file.
+
+
+
+Reset delay: 0 ms
+
+Reset type NORMAL: Resets core & peripherals via SYSRESETREQ & VECTRESET bit.
+
+Reset: Halt core after reset via DEMCR.VC_CORERESET.
+
+Reset: Reset device via AIRCR.SYSRESETREQ.
+
+
+
+
+
+Script processing completed.
+
+
+
+Flashed
+
+Locking
+
+SEGGER J-Link Commander V6.44i (Compiled May 17 2019 17:37:38)
+
+DLL version V6.44i, compiled May 17 2019 17:37:26
+
+
+
+
+
+J-Link Command File read successfully.
+
+Processing script file...
+
+
+
+J-Link connection not established yet but required for command.
+
+Connecting to J-Link via USB...O.K.
+
+Firmware: J-Link Ultra V4 compiled Oct 22 2019 16:29:03
+
+Hardware version: V4.00
+
+S/N: 504505235
+
+License(s): RDI, FlashBP, FlashDL, JFlash, GDB
+
+VTref=3.308V
+
+
+
+Selecting SWD as current target interface.
+
+
+
+Selecting 1000 kHz as target interface speed
+
+
+
+Device "STM32F429ZI" selected.
+
+
+
+
+
+Connecting to target via SWD
+
+Found SW-DP with ID 0x2BA01477
+
+Found SW-DP with ID 0x2BA01477
+
+Scanning AP map to find all available APs
+
+AP[1]: Stopped AP scan as end of AP map has been reached
+
+AP[0]: AHB-AP (IDR: 0x24770011)
+
+Iterating through AP map to find AHB-AP to use
+
+AP[0]: Core found
+
+AP[0]: AHB-AP ROM base: 0xE00FF000
+
+CPUID register: 0x410FC241. Implementer code: 0x41 (ARM)
+
+Found Cortex-M4 r0p1, Little endian.
+
+FPUnit: 6 code (BP) slots and 2 literal slots
+
+CoreSight components:
+
+ROMTbl[0] @ E00FF000
+
+ROMTbl[0][0]: E000E000, CID: B105E00D, PID: 000BB00C SCS-M7
+
+ROMTbl[0][1]: E0001000, CID: B105E00D, PID: 003BB002 DWT
+
+ROMTbl[0][2]: E0002000, CID: B105E00D, PID: 002BB003 FPB
+
+ROMTbl[0][3]: E0000000, CID: B105E00D, PID: 003BB001 ITM
+
+ROMTbl[0][4]: E0040000, CID: B105900D, PID: 000BB9A1 TPIU
+
+ROMTbl[0][5]: E0041000, CID: B105900D, PID: 000BB925 ETM
+
+------------------------------ execUserPreload ---------------------------------
+
+Reset RCC settings and set up PLL with HSE
+
+Regval=0x00005583
+
+Regval=0x00015583
+
+Regval=0x00035583
+
+Regval=0x03035583
+
+Switch system clock source to PLL
+
+Regval=0x0000940A
+
+Cortex-M4 identified.
+
+
+
+Sleep(100)
+
+
+
+Writing 08192A3B -> 40023C08
+
+
+
+Writing 4C5D6E7F -> 40023C08
+
+
+
+Writing BB -> 40023C15
+
+
+
+Writing EE -> 40023C14
+
+
+
+Sleep(100)
+
+
+
+Sleep(100)
+
+
+
+Writing ED -> 40023C14
+
+
+
+Reset delay: 0 ms
+
+Reset type NORMAL: Resets core & peripherals via SYSRESETREQ & VECTRESET bit.
+
+Reset: Halt core after reset via DEMCR.VC_CORERESET.
+
+Reset: Reset device via AIRCR.SYSRESETREQ.
+
+
+
+
+
+Script processing completed.
+
+
+
+Locked
+
+Done
+
+Init started.
+Timeout (120 seconds) fired. Device could not be found in time

@@ -1,0 +1,22 @@
+Update started.
+Waiting for device
+
+Update aborted!
+Init started.
+Init aborted!
+Init started.
+Init aborted!
+Update started.
+Waiting for device
+
+Update aborted!
+Init started.
+Init aborted!
+Init started.
+/bin/sh: 1: /home/sa/.pyenv/bdpctl: not found
+Init started.
+/bin/sh: 1: /home/sa/.pyenv/bdpctl: not found
+Update started.
+Update aborted!
+Update started.
+Update aborted!

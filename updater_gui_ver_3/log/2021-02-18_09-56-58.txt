@@ -1,0 +1,4 @@
+Update started.
+Update aborted!
+/bin/sh: 1: bdpctl: not found
+/bin/sh: 1: bdpctl: not found
