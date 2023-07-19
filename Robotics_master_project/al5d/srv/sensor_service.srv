@@ -1,0 +1,4 @@
+bool[] sensor_list
+int64 reps
+---
+bool res
