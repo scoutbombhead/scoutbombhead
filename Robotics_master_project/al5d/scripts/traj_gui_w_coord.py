@@ -67,13 +67,6 @@ class Ui(QtWidgets.QMainWindow):
         self.wrist_rotateSlider.sliderMoved.connect(self.on_slider_moved)
         self.gripperSlider.sliderMoved.connect(self.on_slider_moved)
 
-        # self.baseSlider.valueChanged.connect(self.on_slider_moved)
-        # self.shoulderSlider.valueChanged.connect(self.on_slider_moved)
-        # self.elbowSlider.valueChanged.connect(self.on_slider_moved)
-        # self.wrist_tiltSlider.valueChanged.connect(self.on_slider_moved)
-        # self.wrist_rotateSlider.valueChanged.connect(self.on_slider_moved)
-        # self.gripperSlider.valueChanged.connect(self.on_slider_moved)
-
         # spin boxes
         self.base_spinBox.valueChanged.connect(self.on_spinbox_changed)
         self.elbow_spinBox.valueChanged.connect(self.on_spinbox_changed)
@@ -81,10 +74,6 @@ class Ui(QtWidgets.QMainWindow):
         self.wrist_tilt_spinBox.valueChanged.connect(self.on_spinbox_changed)
         self.wrist_rotate_spinBox.valueChanged.connect(self.on_spinbox_changed)
         self.gripper_spinBox.valueChanged.connect(self.on_spinbox_changed)
-
-        # self.doubleSpinBox_x.textChanged.connect(self.on_pos_spinbox_changed)
-        # self.doubleSpinBox_y.textChanged.connect(self.on_pos_spinbox_changed)
-        # self.doubleSpinBox_z.textChanged.connect(self.on_pos_spinbox_changed)
 
         # combo box
         self.comboBox.setDuplicatesEnabled(False)
@@ -134,7 +123,6 @@ class Ui(QtWidgets.QMainWindow):
         self.wrist_rotate_spinBox.setValue(0)
         self.gripperSlider.setValue(0)
         self.gripper_spinBox.setValue(0)
-        # self.doubleSpinBox_x.setValue(4.19)
 
     def on_slider_moved(self):
         sender = self.sender()
@@ -192,12 +180,6 @@ class Ui(QtWidgets.QMainWindow):
         self.move_sliders(itemValues)
 
     def move_sliders(self, values):
-        # self.base_spinBox.setValue(values[0])
-        # self.shoulder_spinBox.setValue(values[1])
-        # self.elbow_spinBox.setValue(values[2])
-        # self.wrist_tilt_spinBox.setValue(values[3])
-        # self.wrist_rotate_spinBox.setValue(values[4])
-        # self.gripper_spinBox.setValue(values[5])
         self.base_spinBox.setValue(float(values[0]))
         self.shoulder_spinBox.setValue(float(values[1]))
         self.elbow_spinBox.setValue(float(values[2]))
@@ -223,7 +205,6 @@ class Ui(QtWidgets.QMainWindow):
         print(joints_list)
         # check for no. of itmes in the combo box
         # add to setings
-        # self.settings.setValue("Custom" + str(self.comboBox.count()), joints_list)
         # open dialog to enter name
         dialog = enterNameDialog()
         # Display current Settings from the QSettings object

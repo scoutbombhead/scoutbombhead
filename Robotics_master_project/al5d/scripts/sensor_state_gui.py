@@ -153,7 +153,6 @@ class sensorStateGUI(QMainWindow, Ui_MainWindow):
             self.mediumActualValue = self.mediumActualValue + 1
             if(self.tableWidget.findItems("Medium", Qt.MatchExactly)!=[]):
                 row = self.tableWidget.findItems("Medium", Qt.MatchExactly)[0].row()
-                # self.chilledActualValue = int(self.tableWidget.item(row, 2).text())
                 self.tableWidget.setItem(row, 2, QTableWidgetItem(str(self.mediumActualValue)))
                 self.tableWidget.setItem(row, 3, QTableWidgetItem(
                     str((self.reps - self.mediumActualValue) / self.reps * 100)))
@@ -162,7 +161,6 @@ class sensorStateGUI(QMainWindow, Ui_MainWindow):
             self.sparklingActualValue = self.sparklingActualValue + 1
             if(self.tableWidget.findItems("Sparkling", Qt.MatchExactly)!=[]):
                 row = self.tableWidget.findItems("Sparkling", Qt.MatchExactly)[0].row()
-                # self.chilledActualValue = int(self.tableWidget.item(row, 2).text())
                 self.tableWidget.setItem(row, 2, QTableWidgetItem(str(self.sparklingActualValue)))
                 self.tableWidget.setItem(row, 3, QTableWidgetItem(
                     str((self.reps - self.sparklingActualValue) / self.reps * 100)))
@@ -171,7 +169,6 @@ class sensorStateGUI(QMainWindow, Ui_MainWindow):
             self.ambientActualValue = self.ambientActualValue + 1
             if(self.tableWidget.findItems("Ambient", Qt.MatchExactly)!=[]):
                 row = self.tableWidget.findItems("Ambient", Qt.MatchExactly)[0].row()
-                # self.chilledActualValue = int(self.tableWidget.item(row, 2).text())
                 self.tableWidget.setItem(row, 2, QTableWidgetItem(str(self.ambientActualValue)))
                 self.tableWidget.setItem(row, 3, QTableWidgetItem(
                     str((self.reps - self.ambientActualValue) / self.reps * 100)))
@@ -180,7 +177,6 @@ class sensorStateGUI(QMainWindow, Ui_MainWindow):
             self.hotLeftActualValue = self.hotLeftActualValue + 1
             if(self.tableWidget.findItems("Hot left", Qt.MatchExactly)!=[]):
                 row = self.tableWidget.findItems("Hot left", Qt.MatchExactly)[0].row()
-                # self.chilledActualValue = int(self.tableWidget.item(row, 2).text())
                 self.tableWidget.setItem(row, 2, QTableWidgetItem(str(self.hotLeftActualValue)))
                 self.tableWidget.setItem(row, 3, QTableWidgetItem(
                     str((self.reps - self.hotLeftActualValue) / self.reps * 100)))
@@ -189,7 +185,6 @@ class sensorStateGUI(QMainWindow, Ui_MainWindow):
             self.hotRightActualValue = self.hotRightActualValue + 1
             if(self.tableWidget.findItems("Hot right", Qt.MatchExactly)!=[]):
                 row = self.tableWidget.findItems("Hot right", Qt.MatchExactly)[0].row()
-                # self.chilledActualValue = int(self.tableWidget.item(row, 2).text())
                 self.tableWidget.setItem(row, 2, QTableWidgetItem(str(self.hotRightActualValue)))
                 self.tableWidget.setItem(row, 3, QTableWidgetItem(
                     str((self.reps - self.hotRightActualValue) / self.reps * 100)))
@@ -198,7 +193,6 @@ class sensorStateGUI(QMainWindow, Ui_MainWindow):
             self.chilledActualValue = self.chilledActualValue + 1
             if(self.tableWidget.findItems("Chilled", Qt.MatchExactly)!=[]):
                 row = self.tableWidget.findItems("Chilled", Qt.MatchExactly)[0].row()
-                # self.chilledActualValue = int(self.tableWidget.item(row, 2).text())
                 self.tableWidget.setItem(row, 2, QTableWidgetItem(str(self.chilledActualValue)))
                 self.tableWidget.setItem(row, 3, QTableWidgetItem(
                     str((self.reps - self.chilledActualValue) / self.reps * 100)))
@@ -207,7 +201,6 @@ class sensorStateGUI(QMainWindow, Ui_MainWindow):
             self.portioningActualValue = self.portioningActualValue + 1
             if(self.tableWidget.findItems("Portioning", Qt.MatchExactly)!=[]):
                 row = self.tableWidget.findItems("Portioning", Qt.MatchExactly)[0].row()
-                # self.chilledActualValue = int(self.tableWidget.item(row, 2).text())
                 self.tableWidget.setItem(row, 2, QTableWidgetItem(str(self.portioningActualValue)))
                 self.tableWidget.setItem(row, 3, QTableWidgetItem(
                     str((self.reps - self.portioningActualValue) / self.reps * 100)))
@@ -255,12 +248,7 @@ class Thread(QThread):
     def run(self):
         while True:
             raw = self.ser.read_until(b'\xaa\x55').hex()
-            # print(raw)
-            # print(len(raw))
-        # hexlist = [raw[i:i + 2] for i in range(0, len(raw), 2)]
-        # print(hexlist)
             if len(raw) == 176:
-                # print(raw[24:26], raw[48:50], raw[72:74], raw[96:98], raw[120:122], raw[144:146], raw[168:170])
                 if raw[24:26] == "01":
                     self.setLed.emit(1, True)
                     if not self.pressed[0]:

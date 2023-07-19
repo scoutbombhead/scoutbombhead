@@ -66,13 +66,6 @@ class roboGui(QMainWindow, Ui_MainWindow):
         self.wrist_rotateSlider.sliderMoved.connect(self.on_slider_moved)
         self.gripperSlider.sliderMoved.connect(self.on_slider_moved)
 
-        # self.baseSlider.valueChanged.connect(self.on_slider_moved)
-        # self.shoulderSlider.valueChanged.connect(self.on_slider_moved)
-        # self.elbowSlider.valueChanged.connect(self.on_slider_moved)
-        # self.wrist_tiltSlider.valueChanged.connect(self.on_slider_moved)
-        # self.wrist_rotateSlider.valueChanged.connect(self.on_slider_moved)
-        # self.gripperSlider.valueChanged.connect(self.on_slider_moved)
-
         # spin boxes
         self.base_spinBox.valueChanged.connect(self.on_spinbox_changed)
         self.elbow_spinBox.valueChanged.connect(self.on_spinbox_changed)
@@ -80,10 +73,6 @@ class roboGui(QMainWindow, Ui_MainWindow):
         self.wrist_tilt_spinBox.valueChanged.connect(self.on_spinbox_changed)
         self.wrist_rotate_spinBox.valueChanged.connect(self.on_spinbox_changed)
         self.gripper_spinBox.valueChanged.connect(self.on_spinbox_changed)
-
-        # self.doubleSpinBox_x.textChanged.connect(self.on_pos_spinbox_changed)
-        # self.doubleSpinBox_y.textChanged.connect(self.on_pos_spinbox_changed)
-        # self.doubleSpinBox_z.textChanged.connect(self.on_pos_spinbox_changed)
 
         # combo box
         self.comboBox.setDuplicatesEnabled(False)
@@ -185,8 +174,6 @@ class roboGui(QMainWindow, Ui_MainWindow):
         plot_joints = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         for i in range(0, 5):
             plot_joints[i + 1] = self.joint_pos[i]
-        # print("joint_pos :", joint_pos)
-        # print("new_joints", plot_joints)
 
         self.chain.plot(plot_joints, self.ax)
         matplotlib.pyplot.show()
@@ -209,7 +196,6 @@ class roboGui(QMainWindow, Ui_MainWindow):
 
     def on_slider_moved(self):
         sender = self.sender()
-        # print(sender.objectName())
         if sender.objectName() == "baseSlider":
             self.base_spinBox.setValue(sender.value() / 100 * 1.57)
         elif sender.objectName() == "elbowSlider":
@@ -254,7 +240,6 @@ class roboGui(QMainWindow, Ui_MainWindow):
         keys = self.settings1.allKeys()
         for i in keys:
             self.comboBox.addItem(i, self.settings1.value(i))
-            # print(self.settings.value(i))
 
     def on_select(self):
         itemName = self.comboBox.currentText()
@@ -263,12 +248,6 @@ class roboGui(QMainWindow, Ui_MainWindow):
         self.move_sliders(itemValues)
 
     def move_sliders(self, values):
-        # self.base_spinBox.setValue(values[0])
-        # self.shoulder_spinBox.setValue(values[1])
-        # self.elbow_spinBox.setValue(values[2])
-        # self.wrist_tilt_spinBox.setValue(values[3])
-        # self.wrist_rotate_spinBox.setValue(values[4])
-        # self.gripper_spinBox.setValue(values[5])
         self.base_spinBox.setValue(float(values[0]))
         self.shoulder_spinBox.setValue(float(values[1]))
         self.elbow_spinBox.setValue(float(values[2]))
