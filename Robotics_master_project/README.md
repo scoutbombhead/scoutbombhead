@@ -13,7 +13,6 @@ PyQt5
 Other libraries:
 - IkPy: https://github.com/Phylliade/ikpy
 
-![image](https://github.com/scoutbombhead/scoutbombhead/assets/87804543/96e8a642-8e7f-4e76-8418-8f45444c52eb)
-
+<img src="https://github.com/scoutbombhead/scoutbombhead/assets/87804543/96e8a642-8e7f-4e76-8418-8f45444c52eb" width="500" height="700">
 
 
