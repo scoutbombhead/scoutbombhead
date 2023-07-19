@@ -17,4 +17,5 @@ No installation needed. Extract the folder to a desired location.
 2. On first usage, Click on the "Settings" button and type in the absolute paths of the corresonding tools ending with a "/". Eg.: /path/to/ubundler/ and /path/to/bdp/ 
 3. Click "OK" and start using 
 
+![image](https://github.com/scoutbombhead/scoutbombhead/assets/87804543/d31abbbe-1fc8-414f-a57d-6643f9e37a4c)
 
