@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @scoutbombhead
 - 👀 I’m interested in embedded programming, GUIs and robotics 
-- 🌱 I have experience C/C++, Python and MATLAB
+- 🌱 I have experience in C/C++, Python and MATLAB
 - 💞️ I’m looking to collaborate on creating ROS packages for robots
 - 📫 How to reach me: saudahmed124@gmail.com
 
