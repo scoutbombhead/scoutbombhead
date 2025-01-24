@@ -24,4 +24,4 @@ jobs:
           pip install pytest 
 
       - name: Run Specific Tests
-        run: pytest test_math_operations.py 
+        run: pytest Python_scripts_to_test/ 
