@@ -1,6 +1,12 @@
 import pytest
 
-from math_operations import add, subtract
+import sys
+import os
+
+# Add the directory containing 'Python_scripts_to_test' to sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from Python_scripts_to_test.math_operations import add, subtract
 
 
 def test_add():
