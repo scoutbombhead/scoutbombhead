@@ -24,4 +24,4 @@ jobs:
           pip install pytest 
 
       - name: Run Specific Tests
-        run: Python_scripts_to_test/ 
+        run: pytest Python_scripts_to_test/ 
