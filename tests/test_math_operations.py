@@ -19,3 +19,12 @@ def test_subtract():
     assert(subtract(10, 5) == 5)
     assert(subtract(20, 10) == 10)
     assert (subtract(6, 7) == -1)
+
+@pytest.mark.parametrize("a, b, expected", [
+    (2, 3, 5),
+    (-1, 1, 0),
+    (0, 0, 0),
+    (10, 5, 15)
+])
+def test_add(a, b, expected):
+    assert add(a, b) == expected
