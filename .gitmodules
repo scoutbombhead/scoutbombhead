@@ -1,0 +1,15 @@
+[submodule "BringUpSW_Renesas"]
+	path = BringUpSW_Renesas
+	url = git@github.com:scoutbombhead/BringUpSW_Renesas.git
+[submodule "PyQt5_updater_gui"]
+	path = PyQt5_updater_gui
+	url = git@github.com:scoutbombhead/PyQt5_updater_gui.git
+[submodule "Robot_arm_control_ald5"]
+	path = Robot_arm_control_ald5
+	url = https://github.com/scoutbombhead/Robot_arm_control_ald5.git
+[submodule "NN_from_scratch"]
+	path = NN_from_scratch
+	url = git@github.com:scoutbombhead/NN_from_scratch.git
+[submodule "ZED_Cam_Jetson_Nano"]
+	path = ZED_Cam_Jetson_Nano
+	url = git@github.com:scoutbombhead/ZED_Cam_Jetson_Nano.git
