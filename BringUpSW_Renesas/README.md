@@ -1,2 +1,0 @@
-This project was a part of my Bachelorthesis. The topic was to create a so called "Bring Up Software" for a Renesas R-Car M3N graphic controller. It comprises of a Software to initialize and validate some low-level functionalities of the microcontroller which had a Unix-based OS running on it. The HMI of this Software was based on Python, the rest of the Software was written in C. 
-This project was done in cooperation with Continental AG in Babenhausen, Germany. For legal reasons, I haven't included the written documentation in the repository. 

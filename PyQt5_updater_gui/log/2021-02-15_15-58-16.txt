@@ -1,6 +1,0 @@
-Update started.
-Waiting for device
-
-Update aborted!
-Init started.
-Init aborted!
